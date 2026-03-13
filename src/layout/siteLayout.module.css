@@ -1,0 +1,56 @@
+.shell {
+  position: relative;
+  min-height: 100dvh;
+  background: radial-gradient(1200px 700px at 20% -10%, var(--glowA), transparent 55%),
+    radial-gradient(900px 600px at 90% 10%, var(--glowB), transparent 55%),
+    radial-gradient(900px 700px at 40% 110%, var(--glowC), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  isolation: isolate;
+}
+
+.shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, var(--gridDot) 1px, transparent 0);
+  background-size: 28px 28px;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  z-index: 0;
+}
+
+.shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(77, 212, 255, 0.06), transparent 35%),
+    linear-gradient(240deg, rgba(168, 85, 247, 0.06), transparent 38%);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.skipLink {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.skipLink:focus {
+  left: 12px;
+}
+
+.content {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: calc(28px + var(--header-h)) 0 60px;
+  position: relative;
+  z-index: 1;
+}

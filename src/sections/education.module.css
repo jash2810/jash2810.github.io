@@ -1,0 +1,70 @@
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  border-radius: 18px;
+  padding: 16px;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--border) 55%, var(--text));
+  box-shadow: var(--shadow);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.program {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.field {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.school {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.grade {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.notes {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (min-width: 900px) {
+  .top {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

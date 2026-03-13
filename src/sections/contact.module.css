@@ -1,0 +1,97 @@
+.card {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  border-radius: 18px;
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--border) 55%, var(--text));
+  box-shadow: var(--shadow);
+}
+
+.avail {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pitch {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, #000);
+}
+
+.primaryBtn:hover {
+  filter: brightness(1.05);
+}
+
+.ghostBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  border: 1px solid var(--border);
+}
+
+.ghostBtn:hover {
+  border-color: color-mix(in srgb, var(--border) 70%, var(--text));
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.socialLink {
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+}
+
+.socialLink:hover {
+  border-color: color-mix(in srgb, var(--border) 70%, var(--text));
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: start;
+  }
+  .social {
+    justify-content: flex-end;
+  }
+}

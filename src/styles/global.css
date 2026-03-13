@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light;
+  --header-h: 64px;
+  --bg: #f6f8ff;
+  --card: rgba(255, 255, 255, 0.78);
+  --text: #0b1220;
+  --muted: rgba(11, 18, 32, 0.72);
+  --border: rgba(11, 18, 32, 0.12);
+  --accent: rgb(14, 235, 247);
+  --accent2: #0ca4b1;
+  --shadow: 0 16px 40px rgba(11, 18, 32, 0.16);
+  --glowA: rgba(0, 119, 255, 0.22);
+  --glowB: rgba(124, 58, 237, 0.18);
+  --glowC: rgba(0, 119, 255, 0.12);
+  --gridDot: rgba(11, 18, 32, 0.08);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #070b18;
+  --card: #0c1730;
+  --text: #eaf0ff;
+  --muted: rgba(234, 240, 255, 0.72);
+  --border: rgba(234, 240, 255, 0.12);
+  --accent: #4dd4ff;
+  --accent2: #a855f7;
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  --glowA: rgba(77, 212, 255, 0.18);
+  --glowB: rgba(168, 85, 247, 0.14);
+  --glowC: rgba(77, 212, 255, 0.08);
+  --gridDot: rgba(234, 240, 255, 0.055);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  transition: color 140ms ease, border-color 140ms ease, background 140ms ease,
+    transform 140ms ease;
+}
+
+::selection {
+  background: rgba(93, 173, 226, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 70%, #fff);
+  outline-offset: 2px;
+  border-radius: 10px;
+}

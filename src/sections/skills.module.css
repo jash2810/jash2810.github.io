@@ -1,0 +1,54 @@
+.card {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  border-radius: 18px;
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--border) 55%, var(--text));
+  box-shadow: var(--shadow);
+}
+
+.group {
+  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.groupTitle {
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .group:last-child {
+    grid-column: 1 / -1;
+  }
+}
