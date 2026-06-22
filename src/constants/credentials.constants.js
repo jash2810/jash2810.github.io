@@ -1,6 +1,12 @@
 export const CREDENTIALS = {
   certifications: [
     {
+      name: "AWS Certified Solutions Architect - Associate",
+      issuer: "Amazon Web Services",
+      issueDate: "2026-04",
+      credentialId: "71aaf4db5748477db0173e1974de04d3"
+    },
+    {
       name: "CompTIA Security+",
       issuer: "Udemy",
       issueDate: "2022-01",
